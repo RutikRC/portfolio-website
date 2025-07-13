@@ -166,8 +166,8 @@ export default function SimpleCentered() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+      <div className="relative isolate px-6 pt-14 lg:px-2">
+        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-5">
           <motion.div
             className="flex justify-center mb-6"
             initial={{ opacity: 0, y: -20 }}
