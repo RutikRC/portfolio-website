@@ -22,21 +22,21 @@ export function CenteredWithLogo() {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-8">
           <Link 
-            href="https://github.com"
+            href="https://github.com/RutikRC"
             className="text-gray-500 hover:text-[#8B5CF6] transition-colors duration-200"
             aria-label="GitHub"
           >
             <Github className="h-5 w-5" />
           </Link>
           <Link 
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/rutik-chavan/"
             className="text-gray-500 hover:text-[#8B5CF6] transition-colors duration-200"
             aria-label="LinkedIn"
           >
             <Linkedin className="h-5 w-5" />
           </Link>
           <Link 
-            href="mailto:contact@orchidsai.com"
+            href="mailto:chavanrutik133@gmail.com"
             className="text-gray-500 hover:text-[#8B5CF6] transition-colors duration-200"
             aria-label="Email"
           >

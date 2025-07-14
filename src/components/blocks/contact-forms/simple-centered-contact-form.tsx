@@ -26,19 +26,19 @@ export function SimpleCenteredContactForm() {
   const socials = [
     {
       title: "GitHub",
-      href: "https://github.com/manuarora700",
+      href: "https://github.com/RutikRC",
       icon: Github,
       description: "Open source projects",
     },
     {
       title: "LinkedIn", 
-      href: "https://linkedin.com/in/manuarora28",
+      href: "https://www.linkedin.com/in/rutik-chavan/",
       icon: Linkedin,
       description: "Professional network",
     },
     {
       title: "Email",
-      href: "mailto:hello@johndoe.com",
+      href: "mailto:chavanrutik133@gmail.com",
       icon: Mail,
       description: "Direct contact",
     },
@@ -174,7 +174,7 @@ export function SimpleCenteredContactForm() {
                   <MapPin className="w-5 h-5 text-[var(--color-secondary)] mr-3" />
                   <div>
                     <h3 className="font-semibold text-[var(--color-headline)]">Location</h3>
-                    <p className="text-gray-600">San Francisco, CA</p>
+                    <p className="text-gray-600">Pune, India</p>
                   </div>
                 </div>
                 <div className="pt-4 border-t border-gray-200">
