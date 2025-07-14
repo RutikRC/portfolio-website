@@ -4,7 +4,6 @@ import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import countries from "@/data/globe.json";
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: ThreeElements["mesh"] & {
@@ -64,7 +63,7 @@ let numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
-  const groupRef = useRef();
+  const groupRef = useRef<any>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
   const defaultProps = {
@@ -151,13 +150,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     );
 
     globeRef.current
-      .hexPolygonsData(countries.features)
-      .hexPolygonResolution(3)
-      .hexPolygonMargin(0.7)
       .showAtmosphere(defaultProps.showAtmosphere)
       .atmosphereColor(defaultProps.atmosphereColor)
-      .atmosphereAltitude(defaultProps.atmosphereAltitude)
-      .hexPolygonColor(() => defaultProps.polygonColor);
+      .atmosphereAltitude(defaultProps.atmosphereAltitude);
 
     globeRef.current
       .arcsData(data)

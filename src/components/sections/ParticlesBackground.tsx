@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
-import { Container, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 import Particles from "@tsparticles/react";
+import type { Container, Engine } from "@tsparticles/engine";
 
 export const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {

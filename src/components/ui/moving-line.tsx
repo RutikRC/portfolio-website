@@ -6,11 +6,12 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+import { easeInOut } from "motion/react";
 
 const MovingLine = () => {
   const transition = {
     duration: 14,
-    ease: "easeInOut",
+    ease: easeInOut,
   };
 
   const ref = useRef<any>(null);
