@@ -114,7 +114,7 @@ const TimelineCard = ({ item, index }: { item: TimelineItem; index: number }) =>
       initial={{ opacity: 0, x: isEven ? -50 : 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.2 + 0.3, duration: 0.6 }}
-      className={`relative bg-card rounded-lg shadow-md border border-border p-6 max-w-md ${
+      className={`relative bg-card rounded-lg shadow-md border border-border p-4 md:p-6 max-w-md md:max-w-md ${
         isEven ? "mr-auto" : "ml-auto"
       } hover:shadow-lg transition-shadow duration-300`}
     >
@@ -149,7 +149,7 @@ const TimelineCard = ({ item, index }: { item: TimelineItem; index: number }) =>
       </div>
       
       <div
-        className={`absolute top-6 ${
+        className={`absolute top-6 hidden md:block ${
           isEven ? "-right-3" : "-left-3"
         } w-0 h-0 border-t-8 border-b-8 border-transparent ${
           isEven ? "border-l-8 border-l-card" : "border-r-8 border-r-card"
@@ -188,7 +188,15 @@ export default function ExperienceTimeline() {
         
         <div ref={containerRef} className="relative max-w-4xl mx-auto">
           {/* Animated Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-border h-full">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-border h-full hidden md:block">
+            <motion.div
+              className="w-full bg-primary origin-top"
+              style={{ height: lineHeight }}
+            />
+          </div>
+          
+          {/* Mobile Timeline Line */}
+          <div className="absolute left-6 w-0.5 bg-border h-full md:hidden">
             <motion.div
               className="w-full bg-primary origin-top"
               style={{ height: lineHeight }}
@@ -196,16 +204,21 @@ export default function ExperienceTimeline() {
           </div>
           
           {/* Timeline Items */}
-          <div className="space-y-16">
+          <div className="space-y-8 md:space-y-16">
             {timelineData.map((item, index) => (
-              <div key={item.id} className="relative flex items-center">
+              <div key={item.id} className="relative flex items-start md:items-center">
                 {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div className="absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block">
                   <TimelineDot item={item} index={index} />
                 </div>
                 
-                {/* Timeline Card */}
-                <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
+                {/* Mobile Timeline Dot */}
+                <div className="absolute left-6 transform -translate-x-1/2 z-10 md:hidden">
+                  <TimelineDot item={item} index={index} />
+                </div>
+                
+                {/* Timeline Card - Desktop */}
+                <div className={`w-1/2 hidden md:block ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
                   {index % 2 === 0 ? (
                     <TimelineCard item={item} index={index} />
                   ) : (
@@ -213,12 +226,17 @@ export default function ExperienceTimeline() {
                   )}
                 </div>
                 
-                <div className={`w-1/2 ${index % 2 === 1 ? "pl-8" : "pr-8"}`}>
+                <div className={`w-1/2 hidden md:block ${index % 2 === 1 ? "pl-8" : "pr-8"}`}>
                   {index % 2 === 1 ? (
                     <TimelineCard item={item} index={index} />
                   ) : (
                     <div />
                   )}
+                </div>
+                
+                {/* Timeline Card - Mobile */}
+                <div className="w-full pl-16 md:hidden">
+                  <TimelineCard item={item} index={index} />
                 </div>
               </div>
             ))}
@@ -229,7 +247,7 @@ export default function ExperienceTimeline() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: timelineData.length * 0.2 + 0.5, duration: 0.5 }}
-            className="absolute left-1/2 transform -translate-x-1/2 bottom-0 z-10"
+            className="absolute left-1/2 transform -translate-x-1/2 bottom-0 z-10 hidden md:block"
           >
             <div className="relative">
               <div className="h-12 w-12 bg-primary rounded-full border-4 border-background shadow-lg flex items-center justify-center">
