@@ -82,11 +82,12 @@ const timelineData: TimelineItem[] = [
     location: "Pune, India",
     description: "Developing and maintaining as a single contributor blockchain-based applications and solutions.",
     achievements: [
-      "Developed Real Word Asseets which is used for tokenizations of real world assets using blockchain technology",
-      "Integrated Moonpay Fiat-to-Crypto Payment Gateway and Thirdweb wallet connectivity for RWA",
-      "Developed a Liquidity Pool Bot which manages the liquidity, performs trade execution based on target price and volume generation of Token Pairs on Pancakeswap",
-      "Deployed ERC20 Token on Ethereum Network and deployed ERC20 Token on BSC Network using Solidity",
-      "Developed Server health monitoring system using Vite which gives real time updates of server status and performance metrics"
+      "Developed Real World Assets (RWA) platform for tokenization of physical assets using blockchain technology.",
+      "Integrated MoonPay Fiat-to-Crypto Payment Gateway and Thirdweb wallet connectivity to support RWA transactions.",
+      "Conducted R&D for new features and integrations in a Liquidity Pool Bot, handling frontend, backend, and bot services.",
+      "Built a Liquidity Pool Bot that manages liquidity, executes trades based on target price and volume of token pairs on PancakeSwap.",
+      "Deployed ERC-20 Tokens on both Ethereum and Binance Smart Chain (BSC) networks using Solidity.",
+      "Created a server health monitoring system using Vite, providing real-time server status and performance metrics."
     ]
   }
 ];
