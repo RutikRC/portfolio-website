@@ -89,10 +89,10 @@ export const ParticlesBackground = () => {
         warp: true,
       },
       move: {
-        direction: "none",
+        direction: "none" as const,
         enable: true,
         outModes: {
-          default: "bounce",
+          default: "bounce" as const,
         },
         random: true,
         speed: {
@@ -126,7 +126,7 @@ export const ParticlesBackground = () => {
         },
         value: 80,
         limit: {
-          mode: "delete",
+          mode: "delete" as const,
           value: 120,
         },
       },
@@ -139,8 +139,8 @@ export const ParticlesBackground = () => {
           enable: true,
           speed: 1,
           sync: false,
-          startValue: "random",
-          destroy: "none",
+          startValue: "random" as const,
+          destroy: "none" as const,
         },
       },
       shape: {
@@ -163,8 +163,8 @@ export const ParticlesBackground = () => {
           enable: true,
           speed: 3,
           sync: false,
-          startValue: "random",
-          destroy: "none",
+          startValue: "random" as const,
+          destroy: "none" as const,
         },
       },
       shadow: {
@@ -245,9 +245,9 @@ export const ParticlesBackground = () => {
       position: "absolute" as const,
       width: "100%",
       height: "100%",
-      top: 0,
-      left: 0,
-      zIndex: -1,
+      top: "0",
+      left: "0",
+      zIndex: "-1",
     },
     fullScreen: {
       enable: false,
@@ -259,8 +259,6 @@ export const ParticlesBackground = () => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <Particles
         id="nature-ai-particles"
-        init={particlesInit}
-        loaded={particlesLoaded}
         options={particlesOptions}
         className="absolute inset-0"
       />

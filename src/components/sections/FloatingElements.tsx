@@ -159,7 +159,7 @@ const FloatingElement = ({ element }: { element: FloatingElement }) => {
               fontWeight: 'bold',
             }}
           >
-            {element.content}
+            {element.content as string}
           </span>
         );
       case 'icon':

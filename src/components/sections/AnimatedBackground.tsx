@@ -68,7 +68,9 @@ function FloatingCodeSnippets() {
       // Fade in/out effect
       const distance = Math.abs(child.position.y)
       const fadeOpacity = Math.max(0, 1 - distance / 10)
-      child.material.opacity = snippet.opacity * fadeOpacity
+      if ('material' in child && child.material) {
+        (child.material as any).opacity = snippet.opacity * fadeOpacity
+      }
     })
   })
 
@@ -97,10 +99,10 @@ function MERNIcons() {
   const groupRef = useRef<THREE.Group>(null)
   
   const icons = useMemo(() => [
-    { name: 'M', position: [-8, 3, -5], color: '#8B5CF6', speed: 0.01 },
-    { name: 'E', position: [8, -2, -8], color: '#60A5FA', speed: 0.008 },
-    { name: 'R', position: [-6, -4, -3], color: '#8B5CF6', speed: 0.012 },
-    { name: 'N', position: [6, 4, -6], color: '#60A5FA', speed: 0.009 }
+    { name: 'M', position: [-8, 3, -5] as [number, number, number], color: '#8B5CF6', speed: 0.01 },
+    { name: 'E', position: [8, -2, -8] as [number, number, number], color: '#60A5FA', speed: 0.008 },
+    { name: 'R', position: [-6, -4, -3] as [number, number, number], color: '#8B5CF6', speed: 0.012 },
+    { name: 'N', position: [6, 4, -6] as [number, number, number], color: '#60A5FA', speed: 0.009 }
   ], [])
 
   useFrame((state) => {

@@ -79,7 +79,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 }
 
 export default function ProjectsShowcase() {
@@ -118,7 +118,7 @@ export default function ProjectsShowcase() {
                 boxShadow: "0 25px 50px -12px rgba(139, 92, 246, 0.25)",
                 y: -4
               }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: "easeOut" as const }}
               className={`group relative bg-card border border-border-subtle rounded-xl overflow-hidden shadow-sm ${
                 index % 3 === 2 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
