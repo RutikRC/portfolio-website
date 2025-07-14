@@ -45,7 +45,7 @@ export function SimpleCenteredContactForm() {
   ];
 
   return (
-    <div className="bg-white w-full flex items-center justify-center font-[var(--font-body)] py-16 lg:py-24">
+    <div className="bg-white w-full flex items-center justify-center font-[var(--font-body)] py-16 lg:py-24" id='contact'>
       <div className="flex relative px-4 z-20 items-center w-full justify-center">
         <div className="mx-auto w-full max-w-4xl">
           {/* Header Section */}

@@ -69,7 +69,7 @@ export default function SimpleCentered() {
   ]
 
   return (
-    <div className="bg-transparent relative">
+    <div className="bg-transparent relative" id='about'>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
@@ -166,7 +166,7 @@ export default function SimpleCentered() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-2">
+      <div className="relative isolate px-6 pt-14 lg:px-2" id='home'>
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-5">
           <motion.div
             className="flex justify-center mb-6"

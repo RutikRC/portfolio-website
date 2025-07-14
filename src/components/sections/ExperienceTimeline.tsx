@@ -172,7 +172,7 @@ export default function ExperienceTimeline() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background" id='experience'>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
