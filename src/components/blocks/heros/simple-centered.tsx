@@ -215,7 +215,7 @@ export default function SimpleCentered() {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <span className="block bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent bg-300% animate-gradient">
-                with Orchids AI
+                Welcome to my Portfolio
               </span>
             </motion.h1>
 
@@ -225,7 +225,7 @@ export default function SimpleCentered() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
             >
-              Junior Blockchain Developer specializing in{' '}
+              I'm a Junior Blockchain Developer specializing in{' '}
               <span className="text-primary font-semibold">Blockchain</span>,{' '}
               <span className="text-secondary font-semibold">AI Integration</span> &{' '}
               <span className="text-primary font-semibold">Web3</span>. 
