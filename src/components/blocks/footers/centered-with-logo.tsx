@@ -12,7 +12,7 @@ export function CenteredWithLogo() {
         {/* Logo and Subtitle */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-[#8B5CF6] mb-2 font-[var(--font-display)]">
-            Orchids AI
+            JUNIOR BLOCKCHAIN DEVELOPER
           </h2>
           <p className="text-sm text-gray-600 font-[var(--font-body)]">
             Crafted with ♡ by Rutik Chavan
@@ -46,7 +46,7 @@ export function CenteredWithLogo() {
 
         {/* Copyright */}
         <p className="text-sm text-gray-500 font-[var(--font-body)]">
-          © {currentYear} Orchids AI. All rights reserved.
+          © {currentYear} Rutik Chavan. All rights reserved.
         </p>
       </div>
     </div>

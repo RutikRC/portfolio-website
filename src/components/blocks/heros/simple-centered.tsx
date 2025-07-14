@@ -84,7 +84,7 @@ export default function SimpleCentered() {
               </motion.div> */}
             </a>
           </div>
-          <div className="flex lg:hidden">
+          {/* <div className="flex lg:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -93,7 +93,7 @@ export default function SimpleCentered() {
               <span className="sr-only">Open main menu</span>
               <Menu aria-hidden="true" className="size-6" />
             </button>
-          </div>
+          </div> */}
           {/* <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <motion.a 
@@ -225,11 +225,14 @@ export default function SimpleCentered() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
             >
-              Junior Software Developer specializing in{' '}
-              <span className="text-primary font-semibold">MERN Stack</span>,{' '}
+              Junior Blockchain Developer specializing in{' '}
+              <span className="text-primary font-semibold">Blockchain</span>,{' '}
               <span className="text-secondary font-semibold">AI Integration</span> &{' '}
-              <span className="text-primary font-semibold">Cloud Solutions</span>. 
-              Passionate about creating innovative solutions that bridge technology and user experience.
+              <span className="text-primary font-semibold">Web3</span>. 
+              Passionate about creating innovative solutions that bridge technology and user experience. With hands-on
+              experience in {' '}
+              <span className="text-primary font-semibold">MERN Stack</span>,{' '}
+
             </motion.p>
 
             <motion.div 

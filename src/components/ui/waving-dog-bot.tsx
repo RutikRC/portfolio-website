@@ -55,7 +55,7 @@ export const WavingDogBot = ({
   // Typing effect
   useEffect(() => {
     if (showSpeechBubble) {
-      const text = "Hi!";
+      const text = "こんにちは!";
       let i = 0;
       const typeInterval = setInterval(() => {
         if (i < text.length) {

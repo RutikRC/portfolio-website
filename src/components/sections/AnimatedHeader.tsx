@@ -200,7 +200,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
               onClick={() => handleNavClick("#home")}
             >
               {logo ? (
-                <img src={logo} alt={brandName} className="h-8 w-8" />
+                <img src={logo} alt={brandName} className="h-14 w-12 rounded-[10px]" />
               ) : (
                 <motion.div
                   animate={{ 
