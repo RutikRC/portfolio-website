@@ -80,11 +80,13 @@ const timelineData: TimelineItem[] = [
     title: "Junior Blockchain Developer",
     organization: "Blocsys Technologies Pvt. Ltd.",
     location: "Pune, India",
-    description: "Developing and maintaining blockchain-based applications and solutions.",
+    description: "Developing and maintaining as a single contributor blockchain-based applications and solutions.",
     achievements: [
-      "Developed 10+ projects using React, Node.js, and cloud technologies",
-      "Maintained 98% client satisfaction rate with on-time delivery",
-      "Worked on 10+ projects using React, Node.js, and cloud technologies",
+      "Developed Real Word Asseets which is used for tokenizations of real world assets using blockchain technology",
+      "Integrated Moonpay Fiat-to-Crypto Payment Gateway and Thirdweb wallet connectivity for RWA",
+      "Developed a Liquidity Pool Bot which manages the liquidity, performs trade execution based on target price and volume generation of Token Pairs on Pancakeswap",
+      "Deployed ERC20 Token on Ethereum Network and deployed ERC20 Token on BSC Network using Solidity",
+      "Developed Server health monitoring system using Vite which gives real time updates of server status and performance metrics"
     ]
   }
 ];
