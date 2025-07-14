@@ -75,7 +75,7 @@ export const WavingDogBot = ({
       y: [0, -8, 0],
       transition: {
         duration: 3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         repeat: Infinity,
       }
     }
@@ -86,14 +86,14 @@ export const WavingDogBot = ({
       rotate: [0, 15, -10, 15, -5, 0],
       transition: {
         duration: 0.8,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       }
     },
     idle: {
       rotate: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       }
     }
   };
@@ -102,7 +102,7 @@ export const WavingDogBot = ({
     hover: {
       scale: 1.05,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 20,
       }
@@ -110,7 +110,7 @@ export const WavingDogBot = ({
     initial: {
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 20,
       }
@@ -128,7 +128,7 @@ export const WavingDogBot = ({
       scale: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 25,
         duration: 0.4,

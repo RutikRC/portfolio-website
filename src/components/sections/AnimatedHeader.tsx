@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimationProps } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X, Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -114,7 +114,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
       y: scrollDirection === "down" && isScrolled ? -100 : 0,
       opacity: scrollDirection === "down" && isScrolled ? 0 : 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 20,
         stiffness: 300,
         duration: 0.3,
@@ -128,7 +128,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
       height: 0,
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         staggerChildren: 0.05,
         staggerDirection: -1,
       },
@@ -138,7 +138,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
       height: "auto",
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
         staggerChildren: 0.1,
         delayChildren: 0.1,
       },
