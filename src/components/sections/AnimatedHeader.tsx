@@ -86,10 +86,18 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
 
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
+    console.log('Navigating to:', href, 'Element found:', !!element);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Close mobile menu first
+      setIsOpen(false);
+      
+      // Add a small delay to ensure menu is closed before scrolling
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      console.warn('Element not found for href:', href);
     }
-    setIsOpen(false);
   };
 
   const handleCTAClick = () => {
@@ -334,7 +342,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
                   whileHover={{ x: 4, backgroundColor: "rgba(139, 92, 246, 0.1)" }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleNavClick(item.href)}
-                  className="w-full text-left px-4 py-3 rounded-xl text-neutral hover:text-primary transition-all duration-300 relative overflow-hidden"
+                  className="w-full text-left px-4 py-3 rounded-xl text-neutral hover:text-primary transition-all duration-300 relative overflow-hidden cursor-pointer"
                 >
                   <span className="relative z-10">{item.name}</span>
                   {activeSection === item.id && (
