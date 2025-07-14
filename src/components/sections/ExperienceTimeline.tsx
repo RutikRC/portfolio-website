@@ -19,27 +19,26 @@ const timelineData: TimelineItem[] = [
   {
     id: "1",
     type: "education",
-    date: "2024 - Present",
-    title: "Master of Computer Science",
-    organization: "Stanford University",
-    location: "Stanford, CA",
-    description: "Specializing in Machine Learning and Artificial Intelligence with focus on deep learning applications.",
+    date: "2022 - 2024",
+    title: "Master of Computer Application",
+    organization: "Zeal Institute of Computer Application, Business Administration and Research",
+    location: "Pune, India",
+    description: "Specializing in Blockchain and Full Stack Development with focus on machine learning applications.",
     achievements: [
-      "Relevant Coursework: Advanced Algorithms, Machine Learning, Computer Vision",
-      "Research Assistant in AI Lab working on neural network optimization",
-      "GPA: 3.9/4.0"
+      "Achievements: Awarded A Grade Certificate in Data Analytics",
+      "CGPA: 7.63/10"
     ]
   },
   {
     id: "2",
     type: "work",
-    date: "Summer 2023",
-    title: "Software Engineering Intern",
-    organization: "Google",
-    location: "Mountain View, CA",
+    date: "Dec 2023 - Mar 2024",
+    title: "Web Developer",
+    organization: "Karmacts Systems Pvt. Ltd.",
+    location: "Pune, India",
     description: "Developed scalable web applications and contributed to core platform infrastructure.",
     achievements: [
-      "Built real-time analytics dashboard serving 10M+ daily users",
+      "Built real-time analytics dashboard serving 100+ daily users",
       "Optimized backend APIs reducing response time by 40%",
       "Collaborated with cross-functional teams on user experience improvements"
     ]
@@ -47,29 +46,45 @@ const timelineData: TimelineItem[] = [
   {
     id: "3",
     type: "work",
-    date: "2022 - 2023",
-    title: "Freelance Full-Stack Developer",
-    organization: "Independent",
-    location: "Remote",
+    date: "Apr 2024 - Sept 2024",
+    title: "Trainee Software Developer",
+    organization: "Karmacts Systems Pvt. Ltd.",
+    location: "Pune, India",
     description: "Delivered custom web applications for startups and small businesses across various industries.",
     achievements: [
-      "Completed 15+ projects using React, Node.js, and cloud technologies",
+      "Completed 10+ projects using React, Node.js, and cloud technologies",
       "Maintained 98% client satisfaction rate with on-time delivery",
-      "Generated $50K+ revenue through referrals and repeat clients"
+      "Generated 100K+ revenue through referrals and repeat clients"
     ]
   },
   {
     id: "4",
-    type: "education",
-    date: "2020 - 2024",
-    title: "Bachelor of Science in Computer Science",
-    organization: "University of California, Berkeley",
-    location: "Berkeley, CA",
+    type: "work",
+    date: "Oct 2024 - Mar 2025",
+    title: "Junior Software Developer",
+    organization: "Karmacts Systems Pvt. Ltd.",
+    location: "Pune, India",
     description: "Comprehensive computer science education with emphasis on software engineering and systems design.",
     achievements: [
-      "Graduated Summa Cum Laude with GPA: 3.8/4.0",
-      "President of Computer Science Student Association",
-      "Dean's List for 6 consecutive semesters"
+      "Led 5+ projects using React, Node.js, and cloud technologies",
+      "Mentored 5+ trainee developers on React, Node.js, and cloud technologies",
+      "Developed 10+ projects using React, Node.js, and cloud technologies",
+      "Maintained 98% client satisfaction rate with on-time delivery",
+      "Worked on 10+ projects using React, Node.js, and cloud technologies"
+    ]
+  },
+  {
+    id: "5",
+    type: "work",
+    date: "Apr 2025 - Present",
+    title: "Junior Blockchain Developer",
+    organization: "Blocsys Technologies Pvt. Ltd.",
+    location: "Pune, India",
+    description: "Developing and maintaining blockchain-based applications and solutions.",
+    achievements: [
+      "Developed 10+ projects using React, Node.js, and cloud technologies",
+      "Maintained 98% client satisfaction rate with on-time delivery",
+      "Worked on 10+ projects using React, Node.js, and cloud technologies",
     ]
   }
 ];
