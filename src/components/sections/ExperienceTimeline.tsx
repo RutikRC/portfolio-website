@@ -38,9 +38,10 @@ const timelineData: TimelineItem[] = [
     location: "Pune, India",
     description: "Developed scalable web applications and contributed to core platform infrastructure.",
     achievements: [
-      "Built real-time analytics dashboard serving 100+ daily users",
+      "Developed a RESTful API that served as the backend for a web application, improving scalability and reducing latency by 30%.",
       "Optimized backend APIs reducing response time by 40%",
-      "Collaborated with cross-functional teams on user experience improvements"
+      "Collaborated on code reviews and version control with Git, boosting team productivity by 15%.",
+      "Applied best practices in coding, testing, and deployment, gaining extensive experience with a modern tech stack."
     ]
   },
   {
@@ -52,9 +53,9 @@ const timelineData: TimelineItem[] = [
     location: "Pune, India",
     description: "Delivered custom web applications for startups and small businesses across various industries.",
     achievements: [
-      "Completed 10+ projects using React, Node.js, and cloud technologies",
-      "Maintained 98% client satisfaction rate with on-time delivery",
-      "Generated 100K+ revenue through referrals and repeat clients"
+      "Utilized CRM software to track customer data, interactions, and activity, increasing customer satisfaction scores by 15% and improving response times by 20%.",
+      "Debugged software, identified root causes, and proposed solutions, resolving 95% of critical issues within the first 48 hours and reducing downtime by 30%.",
+      "Reviewed software requirements and provided feedback, improving alignment with customer needs by 30% and reducing requirement- related defects by 40%."
     ]
   },
   {
@@ -66,11 +67,12 @@ const timelineData: TimelineItem[] = [
     location: "Pune, India",
     description: "Comprehensive computer science education with emphasis on software engineering and systems design.",
     achievements: [
-      "Led 5+ projects using React, Node.js, and cloud technologies",
+      "Full-Stack Development: Worked on both backend and frontend development.",
       "Mentored 5+ trainee developers on React, Node.js, and cloud technologies",
-      "Developed 10+ projects using React, Node.js, and cloud technologies",
-      "Maintained 98% client satisfaction rate with on-time delivery",
-      "Worked on 10+ projects using React, Node.js, and cloud technologies"
+      "Deployed web applications on AWS Amplify, LightSail, EC2.",
+      "Worked on 10+ projects using React, Node.js, and cloud technologies.",
+      "Maintained comprehensive documentation for all projects, ensuring future accessibility and knowledge transfer within the organization.",
+      "Razorpay Payment Gateway Integration: Integrated Razorpay payment gateway for seamless online transactions, enhancing user experience and increasing conversion rates by 20%.",
     ]
   },
   {
@@ -80,7 +82,7 @@ const timelineData: TimelineItem[] = [
     title: "Junior Blockchain Developer",
     organization: "Blocsys Technologies Pvt. Ltd.",
     location: "Pune, India",
-    description: "Developing and maintaining as a single contributor blockchain-based applications and solutions.",
+    description: "Developing and maintaining as a single contributor as well as a team of 4 blockchain-based applications and solutions.",
     achievements: [
       "Developed Real World Assets (RWA) platform for tokenization of physical assets using blockchain technology.",
       "Integrated MoonPay Fiat-to-Crypto Payment Gateway and Thirdweb wallet connectivity to support RWA transactions.",
