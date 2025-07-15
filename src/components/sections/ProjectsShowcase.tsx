@@ -1,46 +1,56 @@
 "use client"
 
 import { motion } from "motion/react"
-import { ExternalLink, Github, Code } from "lucide-react"
+import { ExternalLink, Code } from "lucide-react"
+import { Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { IconBrandGithub } from "@tabler/icons-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced analytics dashboard. Features include user authentication, shopping cart, order tracking, and admin panel.",
+    title: "VMAP",
+    description: "Comprehensive CRM system for Vishwa Medical Admission Point, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
     image: "/api/placeholder/400/300",
-    techStack: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
-    liveUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/ecommerce",
-    category: "Full-Stack"
+    techStack: ["NestJS", "TypeScript", "Tailwind CSS", "React.js", "AWS EC2", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "#",
+    category: "Full-Stack",
+    company: "Karmacts Systems Pvt. Ltd.",
+    duration: "August 2024 - March 2025"
   },
   {
-    title: "AI-Powered Content Generator",
-    description: "Machine learning application that generates high-quality content using natural language processing. Includes sentiment analysis, keyword optimization, and multi-language support.",
+    title: "Ample CRM",
+    description: "Comprehensive CRM system for Ample Electricals, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
+    image: "/api/placeholder/400/300",
+    techStack: ["NestJS", "TypeScript", "Tailwind CSS", "AWS EC2", "MongoDB"],
+    liveUrl: "https://app.ampleelectricals.in/",
+    githubUrl: "#",
+    category: "Full-Stack",
+    company: "Karmacts Systems Pvt. Ltd.",
+    duration: "August 2024 - October 2024"
+  },
+  {
+    title: "Stock Market Analysis",
+    description: "Machine learning model using Linear Regression to predict future opening prices of NSE-listed bank stocks with 85% accuracy. Includes comprehensive data analysis and interactive visualizations.",
     image: "/api/placeholder/400/350",
-    techStack: ["Python", "TensorFlow", "FastAPI", "MongoDB", "Docker"],
-    liveUrl: "https://ai-content.example.com",
-    githubUrl: "https://github.com/example/ai-content",
-    category: "AI/ML"
+    techStack: ["Python", "Machine Learning", "Linear Regression", "Power BI", "NSE Data"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/RutikRC/Stock-Market-Analysis",
+    category: "AI/ML",
+    company: "Edubridge Learning Pvt. Ltd.",
+    duration: "September 2023 - December 2023"
   },
   {
-    title: "Real-Time Chat Application",
-    description: "Scalable messaging platform with end-to-end encryption, file sharing, group chats, and presence indicators. Built with modern WebSocket technology and optimized for high concurrency.",
+    title: "Spacemate Interior Solutions",
+    description: "Complete interior design platform with CRM integration, serving 1,500+ users. Features include project management, customer tracking, and comprehensive business analytics.",
     image: "/api/placeholder/400/320",
-    techStack: ["Next.js", "Socket.io", "TypeScript", "Prisma", "AWS"],
-    liveUrl: "https://chat.example.com",
-    githubUrl: "https://github.com/example/chat-app",
-    category: "Full-Stack"
-  },
-  {
-    title: "GraphQL API Gateway",
-    description: "High-performance API gateway with GraphQL federation, rate limiting, caching, and comprehensive logging. Designed to handle microservices architecture at enterprise scale.",
-    image: "/api/placeholder/400/280",
-    techStack: ["GraphQL", "Apollo", "Express", "Docker", "Kubernetes"],
-    liveUrl: "https://api.example.com",
-    githubUrl: "https://github.com/example/graphql-gateway",
-    category: "API"
+    techStack: ["Django", "React.js", "Ant Design", "Redux Toolkit", "Python Anywhere", "MySQL"],
+    liveUrl: "https://www.spacemate.in/",
+    githubUrl: "#",
+    category: "Full-Stack",
+    company: "Karmacts Systems Pvt. Ltd.",
+    duration: "February 2024 - September 2024"
   }
 ]
 
@@ -63,7 +73,18 @@ const techStackColors: Record<string, string> = {
   "GraphQL": "bg-pink-100 text-pink-800",
   "Apollo": "bg-purple-100 text-purple-800",
   "Express": "bg-gray-100 text-gray-800",
-  "Kubernetes": "bg-blue-100 text-blue-800"
+  "Kubernetes": "bg-blue-100 text-blue-800",
+  "NestJS": "bg-red-100 text-red-800",
+  "Tailwind CSS": "bg-cyan-100 text-cyan-800",
+  "AWS EC2": "bg-orange-100 text-orange-800",
+  "Machine Learning": "bg-purple-100 text-purple-800",
+  "Linear Regression": "bg-green-100 text-green-800",
+  "Power BI": "bg-yellow-100 text-yellow-800",
+  "NSE Data": "bg-indigo-100 text-indigo-800",
+  "Django": "bg-green-100 text-green-800",
+  "Ant Design": "bg-blue-100 text-blue-800",
+  "Redux Toolkit": "bg-purple-100 text-purple-800",
+  "Python Anywhere": "bg-teal-100 text-teal-800"
 }
 
 const container = {
@@ -136,6 +157,11 @@ export default function ProjectsShowcase() {
                   <h3 className="text-xl font-semibold text-headline mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <span className="font-medium">{project.company}</span>
+                    <span>•</span>
+                    <span>{project.duration}</span>
+                  </div>
                   <p className="text-body-text leading-relaxed">
                     {project.description}
                   </p>
@@ -160,21 +186,26 @@ export default function ProjectsShowcase() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <Button
-                    size="sm"
-                    className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:scale-105"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex items-center gap-2 border-border-subtle hover:border-primary hover:text-primary transition-all duration-200 hover:scale-105"
-                  >
-                    <Github className="w-4 h-4" />
-                    Source Code
-                  </Button>
+                  {project.liveUrl !== "#" && (
+                    <Button
+                      size="sm"
+                      onClick={() => window.open(project.liveUrl, '_blank')}
+                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:scale-105"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </Button>
+                  )}
+                  {project.githubUrl !== "#" && (
+                    <Button
+                      size="sm"
+                      onClick={() => window.open(project.githubUrl, '_blank')}
+                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:scale-105"
+                    >
+                      <IconBrandGithub className="w-4 h-4" />
+                      Source Code
+                    </Button>
+                  )}
                 </div>
               </div>
 
