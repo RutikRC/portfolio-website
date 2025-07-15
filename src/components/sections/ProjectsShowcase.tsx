@@ -11,7 +11,7 @@ const projects = [
   {
     title: "VMAP",
     description: "Comprehensive CRM system for Vishwa Medical Admission Point, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
-    image: "/api/placeholder/400/300",
+    image: "/crm-2.png",
     techStack: ["NestJS", "TypeScript", "Tailwind CSS", "React.js", "AWS EC2", "MongoDB"],
     liveUrl: "#",
     githubUrl: "#",
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Ample CRM",
     description: "Comprehensive CRM system for Ample Electricals, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
-    image: "/api/placeholder/400/300",
+    image: "/crm-1.png",
     techStack: ["NestJS", "TypeScript", "Tailwind CSS", "AWS EC2", "MongoDB"],
     liveUrl: "https://app.ampleelectricals.in/",
     githubUrl: "#",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Stock Market Analysis",
     description: "Machine learning model using Linear Regression to predict future opening prices of NSE-listed bank stocks with 85% accuracy. Includes comprehensive data analysis and interactive visualizations.",
-    image: "/api/placeholder/400/350",
+    image: "/stock-analytics.jpg",
     techStack: ["Python", "Machine Learning", "Linear Regression", "Power BI", "NSE Data"],
     liveUrl: "#",
     githubUrl: "https://github.com/RutikRC/Stock-Market-Analysis",
@@ -44,7 +44,7 @@ const projects = [
   {
     title: "Spacemate Interior Solutions",
     description: "Complete interior design platform with CRM integration, serving 1,500+ users. Features include project management, customer tracking, and comprehensive business analytics.",
-    image: "/api/placeholder/400/320",
+    image: "/home.jpg",
     techStack: ["Django", "React.js", "Ant Design", "Redux Toolkit", "Python Anywhere", "MySQL"],
     liveUrl: "https://www.spacemate.in/",
     githubUrl: "#",
@@ -148,9 +148,11 @@ export default function ProjectsShowcase() {
             >
               {/* Project Image */}
               <div className="aspect-video overflow-hidden bg-muted">
-                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <Code className="w-16 h-16 text-primary opacity-50" />
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               {/* Project Content */}
