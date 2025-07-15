@@ -6,8 +6,6 @@ import { Menu, X } from 'lucide-react'
 import { TypewriterEffect } from '@/components/sections/TypewriterHero'
 import { WavingDogBot } from '@/components/ui/waving-dog-bot'
 import { motion } from 'framer-motion'
-import { BackgroundVideo } from '@/components/sections/DeveloperDogBackground'
-import AnimatedBackground from '@/components/sections/AnimatedBackground'
 
 // const navigation = [
 //   { name: 'Skills', href: '#skills' },
@@ -72,7 +70,6 @@ export default function SimpleCentered() {
 
   return (
     <div className="bg-transparent relative" id='about'>
-      
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
@@ -170,7 +167,6 @@ export default function SimpleCentered() {
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-2" id='home'>
-      <AnimatedBackground/>
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-5">
           <motion.div
             className="flex justify-center mb-6"
