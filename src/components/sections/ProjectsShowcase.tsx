@@ -84,7 +84,9 @@ const techStackColors: Record<string, string> = {
   "Django": "bg-green-100 text-green-800",
   "Ant Design": "bg-blue-100 text-blue-800",
   "Redux Toolkit": "bg-purple-100 text-purple-800",
-  "Python Anywhere": "bg-teal-100 text-teal-800"
+  "Python Anywhere": "bg-teal-100 text-teal-800",
+  "MySQL": "bg-blue-100 text-blue-800",
+  "React.js": "bg-cyan-100 text-cyan-800"
 }
 
 const container = {
