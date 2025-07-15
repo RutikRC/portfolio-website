@@ -106,8 +106,8 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
     } else {
       // Default download CV action
       const link = document.createElement("a");
-      link.href = "/cv.pdf";
-      link.download = "CV.pdf";
+      link.href = "/Rutik-Chavan.pdf";
+      link.download = "Rutik-Chavan-CV.pdf";
       link.click();
     }
   };

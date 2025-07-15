@@ -11,7 +11,7 @@ import Logo from '@/assets/logo.png';
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <AnimatedBackground />
+      {/* <AnimatedBackground /> */}
       <AnimatedHeader 
         logo={Logo.src}
       />
