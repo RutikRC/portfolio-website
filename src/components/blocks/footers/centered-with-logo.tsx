@@ -12,7 +12,7 @@ export function CenteredWithLogo() {
         {/* Logo and Subtitle */}
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-[#8B5CF6] mb-2 font-[var(--font-display)]">
-            JUNIOR BLOCKCHAIN DEVELOPER
+             BLOCKCHAIN DEVELOPER
           </h2>
           <p className="text-sm text-muted-foreground font-[var(--font-body)]">
             Crafted with ♡ by Rutik Chavan

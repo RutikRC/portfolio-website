@@ -6,6 +6,8 @@ import { Menu, X } from 'lucide-react'
 import { TypewriterEffect } from '@/components/sections/TypewriterHero'
 import { WavingDogBot } from '@/components/ui/waving-dog-bot'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import BannerRutik from '@/assets/banner-rutik.png'
 
 // const navigation = [
 //   { name: 'Skills', href: '#skills' },
@@ -167,9 +169,22 @@ export default function SimpleCentered() {
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-2" id='home'>
-        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-5">
+        <div className="relative mx-auto max-w-4xl pb-32 sm:pb-40 lg:pb-28">
+          {/* LinkedIn-style cover banner (full-width hero cover) */}
+          <div className="relative overflow-hidden rounded-none border border-white/10 bg-black/30 w-screen left-1/2 -translate-x-1/2 aspect-[4128/1024]">
+            <Image
+              src={BannerRutik}
+              alt="Rutik Chavan banner"
+              fill
+              priority
+              className="object-contain"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/70" />
+            <div className="absolute inset-0 bg-[radial-gradient(900px_260px_at_20%_0%,rgba(34,211,238,0.22),transparent_55%),radial-gradient(700px_240px_at_80%_40%,rgba(139,92,246,0.18),transparent_60%)] opacity-90" />
+          </div>
+
           <motion.div
-            className="flex justify-center mb-6"
+            className="relative z-10 flex justify-center mb-6 mt-4 sm:mt-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -225,7 +240,7 @@ export default function SimpleCentered() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
             >
-              I'm a Junior Blockchain Developer specializing in{' '}
+              I'm a  Blockchain Developer specializing in{' '}
               <span className="text-primary font-semibold">Blockchain</span>,{' '}
               <span className="text-secondary font-semibold">AI Integration</span> &{' '}
               <span className="text-primary font-semibold">Web3</span>. 
