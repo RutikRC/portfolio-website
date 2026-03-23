@@ -6,6 +6,9 @@ import { Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { IconBrandGithub } from "@tabler/icons-react"
+import rwaImage from "@/assets/RWA.png"
+import volantixImage from "@/assets/volantix.png"
+import dfmImage from "@/assets/DFM.png"
 
 const projects = [
   {
@@ -51,6 +54,62 @@ const projects = [
     category: "Full-Stack",
     company: "Karmacts Systems Pvt. Ltd.",
     duration: "February 2024 - September 2024"
+  },
+  {
+    title: "DeFi Market MVP",
+    description: "Built a DeFi platform on Solana using Anchor with smart contracts, DEX integrations, and full-stack architecture optimized for performance.",
+    image: dfmImage.src,
+    imageClassName: "object-center scale-[1.06]",
+    techStack: ["Rust", "Anchor", "Solana web3.js", "TypeScript", "React", "Nest.js", "MongoDB"],
+    liveUrl: "#",
+    githubUrl: "#",
+    category: "Blockchain",
+    company: "Personal Project",
+    duration: "2025",
+    highlights: [
+      "Developed a DeFi platform on Solana using Anchor framework, implementing 10+ smart contracts and full-stack integration.",
+      "Integrated DEX APIs (Jupiter) for real-time pricing, swaps, and portfolio rebalancing.",
+      "Designed vault logic supporting deposits, redemptions, and fee mechanisms, processing 5,000+ transactions with 99.5% success rate.",
+      "Built high-performance frontend and backend architecture using React, TypeScript, and Solana web3.js, reducing page load time by 40%."
+    ]
+  },
+  {
+    title: "Volantix AMM Bot - Automated Market Maker Trading System",
+    description: "Developed and deployed an AMM trading bot system on BSC with custom token, liquidity, and risk-control automation.",
+    image: volantixImage.src,
+    imageClassName: "object-center scale-[1.12]",
+    techStack: ["Solidity", "Node.js", "React", "Web3.js", "Express.js", "MongoDB", "Binance Smart Chain", "PancakeSwap", "AWS", "Nginx", "PM2"],
+    liveUrl: "#",
+    githubUrl: "#",
+    category: "Blockchain",
+    company: "Personal Project",
+    duration: "2025",
+    highlights: [
+      "Developed and deployed DeFi AMM bot on Binance Smart Chain (BSC), executing 100,000+ trades with $5M+ in trading volume.",
+      "Deployed 3 custom ERC-20 tokens and created 5+ liquidity pools on PancakeSwap Testnet, managing $500,000+ in total liquidity.",
+      "Implemented AMM smart contracts with liquidity addition, price updates, and slippage protection, reducing slippage by 25%.",
+      "Built dynamic control logic with cooldowns, sell limits, and anti-dump features, reducing price volatility by 40%.",
+      "Created frontend dashboards and 6+ backend APIs using React, Node.js, and Web3.js, serving real-time data to 500+ daily active users."
+    ]
+  },
+  {
+    title: "RWA Tokenization",
+    description: "Built a tokenization platform bridging on-chain contracts and off-chain systems with real-time analytics and cloud-native deployment.",
+    image: rwaImage.src,
+    imageClassName: "object-center scale-[1.18]",
+    techStack: ["Node.js", "Web3.js", "MongoDB", "Redis", "AWS EC2", "AWS Route 53", "Nginx", "JWT", "PM2", "Socket.io"],
+    liveUrl: "#",
+    githubUrl: "#",
+    category: "Blockchain",
+    company: "Personal Project",
+    duration: "2025",
+    highlights: [
+      "Developed an AMM trading system on Binance Smart Chain, executing 100,000+ trades with $5M+ trading volume.",
+      "Designed secure tokenization workflow bridging on-chain smart contracts with off-chain databases, processing 1,000+ tokenization transactions.",
+      "Implemented real-time dashboards using Socket.io and Redis caching, reducing blockchain read latency by 70% and API response time by 50%.",
+      "Integrated MoonPay for fiat-to-crypto payments processing $500,000+ in transactions and Thirdweb Wallet supporting 2,000+ wallet connections.",
+      "Deployed on AWS EC2 with PM2, Nginx load balancing, and Route 53 DNS management, achieving 99.9% uptime and supporting 3,000+ concurrent users."
+    ]
   }
 ]
 
@@ -86,7 +145,20 @@ const techStackColors: Record<string, string> = {
   "Redux Toolkit": "bg-purple-100 text-purple-800",
   "Python Anywhere": "bg-teal-100 text-teal-800",
   "MySQL": "bg-blue-100 text-blue-800",
-  "React.js": "bg-cyan-100 text-cyan-800"
+  "React.js": "bg-cyan-100 text-cyan-800",
+  "Rust": "bg-orange-100 text-orange-800",
+  "Anchor": "bg-purple-100 text-purple-800",
+  "Solana web3.js": "bg-violet-100 text-violet-800",
+  "Nest.js": "bg-red-100 text-red-800",
+  "Solidity": "bg-slate-100 text-slate-800",
+  "Web3.js": "bg-indigo-100 text-indigo-800",
+  "Express.js": "bg-gray-100 text-gray-800",
+  "Binance Smart Chain": "bg-yellow-100 text-yellow-800",
+  "PancakeSwap": "bg-amber-100 text-amber-800",
+  "Nginx": "bg-emerald-100 text-emerald-800",
+  "PM2": "bg-lime-100 text-lime-800",
+  "AWS Route 53": "bg-orange-100 text-orange-800",
+  "JWT": "bg-zinc-100 text-zinc-800"
 }
 
 const container = {
@@ -106,6 +178,20 @@ const item = {
 }
 
 export default function ProjectsShowcase() {
+  const priorityOrder = [
+    "DeFi Market MVP",
+    "Volantix AMM Bot - Automated Market Maker Trading System",
+    "RWA Tokenization",
+  ]
+
+  const orderedProjects = [...projects].sort((a, b) => {
+    const aIndex = priorityOrder.indexOf(a.title)
+    const bIndex = priorityOrder.indexOf(b.title)
+    const aPriority = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex
+    const bPriority = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex
+    return aPriority - bPriority
+  })
+
   return (
     <section className="py-24 bg-background" id='projects'>
       <div className="container mx-auto px-6">
@@ -132,7 +218,7 @@ export default function ProjectsShowcase() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
         >
-          {projects.map((project, index) => (
+          {orderedProjects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={item}
@@ -151,7 +237,7 @@ export default function ProjectsShowcase() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${project.imageClassName || ""}`}
                 />
               </div>
 
@@ -169,6 +255,13 @@ export default function ProjectsShowcase() {
                   <p className="text-body-text leading-relaxed">
                     {project.description}
                   </p>
+                  {project.highlights && (
+                    <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-body-text/90">
+                      {project.highlights.map((highlight: string) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
                 {/* Tech Stack */}

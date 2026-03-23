@@ -5,23 +5,23 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-background: #FFFFFF;
-  --color-foreground: #1F2937;
+  --color-background: #050814;
+  --color-foreground: #E6EAF2;
 
-  --color-card: #FFFFFF;
-  --color-card-foreground: #1F2937;
+  --color-card: rgba(10, 18, 40, 0.72);
+  --color-card-foreground: #E6EAF2;
 
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #1F2937;
+  --color-popover: rgba(8, 16, 34, 0.82);
+  --color-popover-foreground: #E6EAF2;
 
   --color-primary: #8B5CF6;
   --color-primary-foreground: #FFFFFF;
 
   --color-secondary: #60A5FA;
-  --color-secondary-foreground: #1F2937;
+  --color-secondary-foreground: #E6EAF2;
 
-  --color-muted: #F8FAFC;
-  --color-muted-foreground: #1F2937;
+  --color-muted: rgba(226, 232, 240, 0.08);
+  --color-muted-foreground: rgba(226, 232, 240, 0.70);
 
   --color-accent: #8B5CF6;
   --color-accent-foreground: #FFFFFF;
@@ -29,23 +29,23 @@
   --color-destructive: #ef4444;
   --color-destructive-foreground: #FFFFFF;
 
-  --color-border: #F8FAFC;
-  --color-input: #F8FAFC;
-  --color-ring: #8B5CF6;
+  --color-border: rgba(226, 232, 240, 0.12);
+  --color-input: rgba(226, 232, 240, 0.10);
+  --color-ring: rgba(34, 211, 238, 0.75);
 
   --color-chart-1: #8B5CF6;
   --color-chart-2: #60A5FA;
-  --color-chart-3: #1F2937;
-  --color-chart-4: #F8FAFC;
+  --color-chart-3: rgba(226, 232, 240, 0.55);
+  --color-chart-4: rgba(226, 232, 240, 0.10);
   --color-chart-5: #60A5FA;
 
-  --color-sidebar: #F8FAFC;
-  --color-sidebar-foreground: #1F2937;
+  --color-sidebar: rgba(8, 16, 34, 0.72);
+  --color-sidebar-foreground: #E6EAF2;
   --color-sidebar-primary: #8B5CF6;
   --color-sidebar-primary-foreground: #FFFFFF;
   --color-sidebar-accent: #E2E8F0;
-  --color-sidebar-accent-foreground: #1F2937;
-  --color-sidebar-border: #CBD5E1;
+  --color-sidebar-accent-foreground: rgba(226, 232, 240, 0.65);
+  --color-sidebar-border: rgba(226, 232, 240, 0.12);
   --color-sidebar-ring: #8B5CF6;
 
   --radius-lg: 0.5rem;
@@ -125,12 +125,12 @@
   --font-display: "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
 
-  --color-headline: #1F2937;
-  --color-body-text: #1F2937;
+  --color-headline: #E6EAF2;
+  --color-body-text: rgba(230,234,242,0.88);
   --color-link: #60A5FA;
   --color-button: #8B5CF6;
   --color-button-text: #FFFFFF;
-  --color-border-subtle: #E2E8F0;
+  --color-border-subtle: rgba(226,232,240,0.12);
 }
 
 /*

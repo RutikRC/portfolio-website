@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Menu, X, Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { StaticImageData } from "next/image";
 
 interface NavItem {
   name: string;
@@ -11,8 +12,10 @@ interface NavItem {
   id: string;
 }
 
+type LogoProp = string | StaticImageData;
+
 interface AnimatedHeaderProps {
-  logo?: string;
+  logo?: LogoProp;
   brandName?: string;
   ctaText?: string;
   ctaAction?: () => void;
@@ -112,6 +115,8 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
     }
   };
 
+  const resolvedLogoSrc = typeof logo === "string" ? logo : logo?.src;
+
   // Animation variants
   const headerVariants = {
     hidden: {
@@ -190,16 +195,191 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
           }}
           className="relative mx-4 lg:mx-8"
         >
-          {/* Animated border gradient */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 p-[1px] animate-gradient bg-300%">
-            <div className="h-full w-full rounded-2xl bg-white/80 backdrop-blur-xl" />
+          {/* Navbar background (ultra subtle Web3 blockchain + glassmorphism) */}
+          <div className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none bg-gradient-to-r from-cyan-400/15 via-violet-500/15 to-cyan-400/15 animate-gradient bg-300% opacity-70">
+            <div className="h-full w-full rounded-2xl bg-black/35 border border-white/10 backdrop-blur-xl overflow-hidden">
+              {/* Soft ambient gradients */}
+              <div className="absolute inset-0 opacity-90">
+                <div className="absolute inset-0 bg-[radial-gradient(1200px_200px_at_20%_0%,rgba(34,211,238,0.22),transparent_55%),radial-gradient(900px_220px_at_70%_30%,rgba(139,92,246,0.18),transparent_60%),linear-gradient(to_right,rgba(0,0,0,0)_0%,rgba(34,211,238,0.06)_30%,rgba(139,92,246,0.05)_60%,rgba(0,0,0,0)_100%)]" />
+                {/* Grid overlay */}
+                <div className="absolute inset-0 opacity-30 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+                  <svg
+                    className="absolute inset-0 h-full w-full"
+                    viewBox="0 0 1920 150"
+                    preserveAspectRatio="none"
+                  >
+                    <defs>
+                      <pattern
+                        id="grid"
+                        width="40"
+                        height="25"
+                        patternUnits="userSpaceOnUse"
+                      >
+                        <path
+                          d="M 40 0 L 0 0 0 25"
+                          fill="none"
+                          stroke="rgba(96,165,250,0.22)"
+                          strokeWidth="1"
+                        />
+                      </pattern>
+                      <linearGradient id="netGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="rgba(34,211,238,0.00)" />
+                        <stop offset="25%" stopColor="rgba(34,211,238,0.55)" />
+                        <stop offset="70%" stopColor="rgba(139,92,246,0.55)" />
+                        <stop offset="100%" stopColor="rgba(139,92,246,0.00)" />
+                      </linearGradient>
+                      <filter id="glow" x="-50%" y="-100%" width="200%" height="300%">
+                        <feGaussianBlur stdDeviation="3.5" result="blur" />
+                        <feMerge>
+                          <feMergeNode in="blur" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                      <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="6" />
+                      </filter>
+                    </defs>
+
+                    {/* Grid */}
+                    <rect x="0" y="0" width="1920" height="150" fill="url(#grid)" opacity="0.35" />
+
+                    {/* Blockchain network lines */}
+                    <g filter="url(#glow)" opacity="0.22">
+                      <path
+                        d="M -120 88 C 180 35, 330 135, 620 80 S 1080 58, 1320 92 S 1820 140, 2080 70"
+                        fill="none"
+                        stroke="url(#netGrad)"
+                        strokeWidth="1.4"
+                        strokeDasharray="6 10"
+                      >
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          values="0;-140"
+                          dur="6s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      <path
+                        d="M -90 112 C 210 65, 420 155, 700 108 S 1140 88, 1420 118 S 1800 160, 2120 100"
+                        fill="none"
+                        stroke="rgba(34,211,238,0.55)"
+                        strokeWidth="1"
+                        strokeDasharray="10 14"
+                      >
+                        <animate
+                          attributeName="stroke-dashoffset"
+                          values="0;120"
+                          dur="8s"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                    </g>
+
+                    {/* Interconnected nodes (subtle horizontal flow) */}
+                    <g opacity="0.7" filter="url(#glow)">
+                      <circle cx="190" cy="88" r="2.4" fill="rgba(34,211,238,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="190;520;190"
+                          dur="5.2s"
+                          repeatCount="indefinite"
+                        />
+                        <animate
+                          attributeName="opacity"
+                          values="0.18;0.65;0.18"
+                          dur="5.2s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="470" cy="84" r="2.2" fill="rgba(139,92,246,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="470;760;470"
+                          dur="6.4s"
+                          repeatCount="indefinite"
+                        />
+                        <animate
+                          attributeName="opacity"
+                          values="0.12;0.55;0.12"
+                          dur="6.4s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="740" cy="96" r="2.3" fill="rgba(34,211,238,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="740;1060;740"
+                          dur="5.8s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="1080" cy="72" r="2.1" fill="rgba(139,92,246,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="1080;1380;1080"
+                          dur="7.2s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="1430" cy="102" r="2.4" fill="rgba(34,211,238,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="1430;1710;1430"
+                          dur="6.0s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                      <circle cx="1720" cy="86" r="2.2" fill="rgba(139,92,246,0.9)">
+                        <animate
+                          attributeName="cx"
+                          values="1720;1900;1720"
+                          dur="8.0s"
+                          repeatCount="indefinite"
+                        />
+                      </circle>
+                    </g>
+
+                    {/* Blurred "digital" texture blocks (no text; abstract hashes/code-like bars) */}
+                    <g opacity="0.18" filter="url(#softBlur)">
+                      <rect x="120" y="28" width="170" height="10" rx="3" fill="rgba(34,211,238,0.35)" />
+                      <rect x="310" y="42" width="130" height="7" rx="3" fill="rgba(139,92,246,0.30)" />
+                      <rect x="520" y="30" width="140" height="9" rx="3" fill="rgba(96,165,250,0.28)" />
+                      <rect x="980" y="24" width="190" height="10" rx="3" fill="rgba(139,92,246,0.28)" />
+                      <rect x="1210" y="40" width="160" height="8" rx="3" fill="rgba(34,211,238,0.28)" />
+                      <rect x="1470" y="26" width="190" height="10" rx="3" fill="rgba(96,165,250,0.25)" />
+                      {/* diagonal fragments */}
+                      <rect x="760" y="70" width="90" height="3" rx="2" fill="rgba(34,211,238,0.35)" />
+                      <rect x="820" y="84" width="120" height="3" rx="2" fill="rgba(139,92,246,0.32)" />
+                      <rect x="420" y="110" width="120" height="3" rx="2" fill="rgba(96,165,250,0.28)" />
+                    </g>
+
+                    {/* Faint light streaks */}
+                    <g opacity="0.25">
+                      <rect x="-220" y="10" width="520" height="2" fill="rgba(34,211,238,0.8)">
+                        <animate
+                          attributeName="x"
+                          values="-220;520;-220"
+                          dur="7.5s"
+                          repeatCount="indefinite"
+                        />
+                      </rect>
+                      <rect x="-260" y="136" width="560" height="2" fill="rgba(139,92,246,0.75)">
+                        <animate
+                          attributeName="x"
+                          values="-260;540;-260"
+                          dur="9s"
+                          repeatCount="indefinite"
+                        />
+                      </rect>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Floating shadow */}
-          <div className="absolute inset-0 rounded-2xl shadow-[0_8px_32px_rgba(139,92,246,0.2)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(139,92,246,0.3)]" />
-
           {/* Content */}
-          <div className="relative flex items-center justify-between px-6 py-4">
+          <div className="relative z-10 flex items-center justify-between px-6 py-4">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -207,8 +387,12 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => handleNavClick("#home")}
             >
-              {logo ? (
-                <img src={logo} alt={brandName} className="h-14 w-12 rounded-[10px]" />
+              {resolvedLogoSrc ? (
+                <img
+                  src={resolvedLogoSrc}
+                  alt={brandName}
+                  className="h-14 w-14 rounded-[10px] object-cover object-center"
+                />
               ) : (
                 <motion.div
                   animate={{ 
@@ -244,9 +428,11 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.href)}
-                  className="relative group px-0 py-2 text-neutral bg-white rounded-5 hover:text-primary transition-colors duration-300"
+                  className="relative group px-3 py-2 text-white/85 bg-white/0 rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white transition-colors duration-300"
                 >
-                  <span className="relative z-10 text-black">{item.name}</span>
+                  <span className="relative z-10 text-white/90 group-hover:text-white">
+                    {item.name}
+                  </span>
                   
                   {/* Animated underline */}
                   <motion.div
@@ -262,7 +448,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
 
                   {/* Ripple effect on click */}
                   <motion.div
-                    className="absolute inset-0 rounded-lg"
+                    className="absolute inset-0 rounded-xl"
                     variants={rippleVariants}
                     initial="initial"
                     whileTap="animate"
@@ -330,8 +516,8 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
           className="md:hidden overflow-hidden mx-4 lg:mx-8"
         >
           <div className="relative">
-            <div className="absolute inset-0 rounded-b-2xl bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 p-[1px]">
-              <div className="h-full w-full rounded-b-2xl bg-white/95 backdrop-blur-xl" />
+            <div className="absolute inset-0 rounded-b-2xl bg-gradient-to-r from-cyan-400/15 via-violet-500/15 to-cyan-400/15 p-[1px] pointer-events-none">
+              <div className="h-full w-full rounded-b-2xl bg-black/45 border border-white/10 backdrop-blur-xl" />
             </div>
             
             <div className="relative p-4 space-y-2">
@@ -342,7 +528,7 @@ export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({
                   whileHover={{ x: 4, backgroundColor: "rgba(139, 92, 246, 0.1)" }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleNavClick(item.href)}
-                  className="w-full text-left px-4 py-3 rounded-xl text-neutral hover:text-primary transition-all duration-300 relative overflow-hidden cursor-pointer"
+                  className="w-full text-left px-4 py-3 rounded-xl text-white/85 hover:text-white transition-all duration-300 relative overflow-hidden cursor-pointer border border-white/10 hover:bg-white/5"
                 >
                   <span className="relative z-10">{item.name}</span>
                   {activeSection === item.id && (

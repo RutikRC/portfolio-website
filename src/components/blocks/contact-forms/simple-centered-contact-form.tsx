@@ -45,7 +45,7 @@ export function SimpleCenteredContactForm() {
   ];
 
   return (
-    <div className="bg-white w-full flex items-center justify-center font-[var(--font-body)] py-16 lg:py-24" id='contact'>
+    <div className="bg-background/40 backdrop-blur-lg w-full flex items-center justify-center font-[var(--font-body)] py-16 lg:py-24" id='contact'>
       <div className="flex relative px-4 z-20 items-center w-full justify-center">
         <div className="mx-auto w-full max-w-4xl">
           {/* Header Section */}
@@ -58,7 +58,7 @@ export function SimpleCenteredContactForm() {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--color-headline)] mb-6 font-[var(--font-display)]">
               Let's Build Something Amazing Together
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Ready to turn your ideas into reality? Let's discuss your project and create something extraordinary.
             </p>
 
@@ -83,7 +83,7 @@ export function SimpleCenteredContactForm() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-[var(--color-border-subtle)]"
+              className="bg-popover/70 p-8 rounded-2xl shadow-lg border border-[var(--color-border-subtle)] backdrop-blur-lg"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Floating Label Input - Name */}
@@ -92,11 +92,11 @@ export function SimpleCenteredContactForm() {
                     id="name"
                     type="text"
                     placeholder=" "
-                    className="peer block w-full bg-white px-4 pt-6 pb-2 rounded-lg border-2 border-gray-200 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
+                    className="peer block w-full bg-input/30 px-4 pt-6 pb-2 rounded-lg border-2 border-border/60 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
                   />
                   <label
                     htmlFor="name"
-                    className="absolute left-4 top-2 text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
+                    className="absolute left-4 top-2 text-sm text-muted-foreground transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted-foreground/90 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
                   >
                     Full Name
                   </label>
@@ -108,11 +108,11 @@ export function SimpleCenteredContactForm() {
                     id="email"
                     type="email"
                     placeholder=" "
-                    className="peer block w-full bg-white px-4 pt-6 pb-2 rounded-lg border-2 border-gray-200 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
+                    className="peer block w-full bg-input/30 px-4 pt-6 pb-2 rounded-lg border-2 border-border/60 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
                   />
                   <label
                     htmlFor="email"
-                    className="absolute left-4 top-2 text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
+                    className="absolute left-4 top-2 text-sm text-muted-foreground transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted-foreground/90 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
                   >
                     Email Address
                   </label>
@@ -124,11 +124,11 @@ export function SimpleCenteredContactForm() {
                     id="company"
                     type="text"
                     placeholder=" "
-                    className="peer block w-full bg-white px-4 pt-6 pb-2 rounded-lg border-2 border-gray-200 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
+                    className="peer block w-full bg-input/30 px-4 pt-6 pb-2 rounded-lg border-2 border-border/60 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200"
                   />
                   <label
                     htmlFor="company"
-                    className="absolute left-4 top-2 text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
+                    className="absolute left-4 top-2 text-sm text-muted-foreground transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted-foreground/90 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
                   >
                     Company (Optional)
                   </label>
@@ -140,11 +140,11 @@ export function SimpleCenteredContactForm() {
                     rows={5}
                     id="message"
                     placeholder=" "
-                    className="peer block w-full bg-white px-4 pt-6 pb-2 rounded-lg border-2 border-gray-200 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200 resize-none"
+                    className="peer block w-full bg-input/30 px-4 pt-6 pb-2 rounded-lg border-2 border-border/60 text-[var(--color-foreground)] placeholder-transparent focus:border-[var(--color-primary)] focus:outline-none transition-colors duration-200 resize-none"
                   />
                   <label
                     htmlFor="message"
-                    className="absolute left-4 top-2 text-sm text-gray-500 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
+                    className="absolute left-4 top-2 text-sm text-muted-foreground transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-muted-foreground/90 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[var(--color-primary)]"
                   >
                     Your Message
                   </label>
@@ -174,11 +174,11 @@ export function SimpleCenteredContactForm() {
                   <MapPin className="w-5 h-5 text-[var(--color-secondary)] mr-3" />
                   <div>
                     <h3 className="font-semibold text-[var(--color-headline)]">Location</h3>
-                    <p className="text-gray-600">Pune, India</p>
+                    <p className="text-muted-foreground">Pune, India</p>
                   </div>
                 </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 mb-2">Available for:</p>
+                <div className="pt-4 border-t border-border/60">
+                  <p className="text-sm text-muted-foreground/90 mb-2">Available for:</p>
                   <div className="flex flex-wrap gap-2">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
                       Full-time opportunities
@@ -206,7 +206,7 @@ export function SimpleCenteredContactForm() {
                       >
                         <Link
                           href={social.href}
-                          className="flex items-center p-4 rounded-xl border border-gray-200 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/5 transition-all duration-200 group"
+                          className="flex items-center p-4 rounded-xl border border-white/10 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/5 transition-all duration-200 group"
                         >
                           <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[var(--color-muted)] group-hover:bg-[var(--color-primary)] transition-colors duration-200">
                             <IconComponent className="w-5 h-5 text-[var(--color-secondary)] group-hover:text-white transition-colors duration-200" />
@@ -215,7 +215,7 @@ export function SimpleCenteredContactForm() {
                             <h4 className="font-medium text-[var(--color-headline)] group-hover:text-[var(--color-primary)] transition-colors duration-200">
                               {social.title}
                             </h4>
-                            <p className="text-sm text-gray-600">{social.description}</p>
+                            <p className="text-sm text-muted-foreground/90">{social.description}</p>
                           </div>
                         </Link>
                       </motion.div>
