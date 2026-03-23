@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <AnimatedBackground />
       <AnimatedHeader 
-        logo={Logo.src}
+        logo={Logo}
       />
       <SimpleCentered />
       <SkillsShowcase />
