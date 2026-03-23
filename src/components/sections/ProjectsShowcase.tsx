@@ -6,6 +6,9 @@ import { Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { IconBrandGithub } from "@tabler/icons-react"
+import rwaImage from "@/assets/RWA.png"
+import volantixImage from "@/assets/volantix.png"
+import dfmImage from "@/assets/DFM.png"
 
 const projects = [
   {
@@ -55,7 +58,8 @@ const projects = [
   {
     title: "DeFi Market MVP",
     description: "Built a DeFi platform on Solana using Anchor with smart contracts, DEX integrations, and full-stack architecture optimized for performance.",
-    image: "/stock-analytics.jpg",
+    image: dfmImage.src,
+    imageClassName: "object-center scale-[1.06]",
     techStack: ["Rust", "Anchor", "Solana web3.js", "TypeScript", "React", "Nest.js", "MongoDB"],
     liveUrl: "#",
     githubUrl: "#",
@@ -72,7 +76,8 @@ const projects = [
   {
     title: "Volantix AMM Bot - Automated Market Maker Trading System",
     description: "Developed and deployed an AMM trading bot system on BSC with custom token, liquidity, and risk-control automation.",
-    image: "/stock-analytics.jpg",
+    image: volantixImage.src,
+    imageClassName: "object-center scale-[1.12]",
     techStack: ["Solidity", "Node.js", "React", "Web3.js", "Express.js", "MongoDB", "Binance Smart Chain", "PancakeSwap", "AWS", "Nginx", "PM2"],
     liveUrl: "#",
     githubUrl: "#",
@@ -90,7 +95,8 @@ const projects = [
   {
     title: "RWA Tokenization",
     description: "Built a tokenization platform bridging on-chain contracts and off-chain systems with real-time analytics and cloud-native deployment.",
-    image: "/stock-analytics.jpg",
+    image: rwaImage.src,
+    imageClassName: "object-center scale-[1.18]",
     techStack: ["Node.js", "Web3.js", "MongoDB", "Redis", "AWS EC2", "AWS Route 53", "Nginx", "JWT", "PM2", "Socket.io"],
     liveUrl: "#",
     githubUrl: "#",
@@ -140,7 +146,6 @@ const techStackColors: Record<string, string> = {
   "Python Anywhere": "bg-teal-100 text-teal-800",
   "MySQL": "bg-blue-100 text-blue-800",
   "React.js": "bg-cyan-100 text-cyan-800",
-  "React": "bg-cyan-100 text-cyan-800",
   "Rust": "bg-orange-100 text-orange-800",
   "Anchor": "bg-purple-100 text-purple-800",
   "Solana web3.js": "bg-violet-100 text-violet-800",
@@ -173,6 +178,20 @@ const item = {
 }
 
 export default function ProjectsShowcase() {
+  const priorityOrder = [
+    "DeFi Market MVP",
+    "Volantix AMM Bot - Automated Market Maker Trading System",
+    "RWA Tokenization",
+  ]
+
+  const orderedProjects = [...projects].sort((a, b) => {
+    const aIndex = priorityOrder.indexOf(a.title)
+    const bIndex = priorityOrder.indexOf(b.title)
+    const aPriority = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex
+    const bPriority = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex
+    return aPriority - bPriority
+  })
+
   return (
     <section className="py-24 bg-background" id='projects'>
       <div className="container mx-auto px-6">
@@ -199,7 +218,7 @@ export default function ProjectsShowcase() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto"
         >
-          {projects.map((project, index) => (
+          {orderedProjects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={item}
@@ -218,7 +237,7 @@ export default function ProjectsShowcase() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${project.imageClassName || ""}`}
                 />
               </div>
 
