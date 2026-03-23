@@ -57,7 +57,7 @@ const projects = [
   },
   {
     title: "DeFi Market MVP",
-    description: "Built a DeFi platform on Solana using Anchor with smart contracts, DEX integrations, and full-stack architecture optimized for performance.",
+    description: "DeFi Trading Platform built for creating, managing, and trading Decentralized Token Folios (DTFs) across multiple blockchains. Our next-generation platform enables permissionless vault creation for ETFs (exchange-traded funds), powered by automated rebalancing, multi-asset portfolio management, and fully transparent fee structures - delivering scalable, secure, and efficient DeFi trading experiences.",
     image: dfmImage.src,
     imageClassName: "object-center scale-[1.06]",
     techStack: ["Rust", "Anchor", "Solana web3.js", "TypeScript", "React", "Nest.js", "MongoDB"],
@@ -65,17 +65,11 @@ const projects = [
     githubUrl: "#",
     category: "Blockchain",
     company: "Personal Project",
-    duration: "2025",
-    highlights: [
-      "Developed a DeFi platform on Solana using Anchor framework, implementing 10+ smart contracts and full-stack integration.",
-      "Integrated DEX APIs (Jupiter) for real-time pricing, swaps, and portfolio rebalancing.",
-      "Designed vault logic supporting deposits, redemptions, and fee mechanisms, processing 5,000+ transactions with 99.5% success rate.",
-      "Built high-performance frontend and backend architecture using React, TypeScript, and Solana web3.js, reducing page load time by 40%."
-    ]
+    duration: "2025"
   },
   {
     title: "Volantix AMM Bot - Automated Market Maker Trading System",
-    description: "Developed and deployed an AMM trading bot system on BSC with custom token, liquidity, and risk-control automation.",
+    description: "Automated Market Maker (AMM) trading system on Binance Smart Chain focused on high-frequency, rule-driven execution with liquidity management, slippage protection, and anti-volatility controls. It combines custom smart contracts, real-time dashboards, and backend APIs to deliver reliable, scalable DeFi trade operations and portfolio visibility.",
     image: volantixImage.src,
     imageClassName: "object-center scale-[1.12]",
     techStack: ["Solidity", "Node.js", "React", "Web3.js", "Express.js", "MongoDB", "Binance Smart Chain", "PancakeSwap", "AWS", "Nginx", "PM2"],
@@ -83,18 +77,11 @@ const projects = [
     githubUrl: "#",
     category: "Blockchain",
     company: "Personal Project",
-    duration: "2025",
-    highlights: [
-      "Developed and deployed DeFi AMM bot on Binance Smart Chain (BSC), executing 100,000+ trades with $5M+ in trading volume.",
-      "Deployed 3 custom ERC-20 tokens and created 5+ liquidity pools on PancakeSwap Testnet, managing $500,000+ in total liquidity.",
-      "Implemented AMM smart contracts with liquidity addition, price updates, and slippage protection, reducing slippage by 25%.",
-      "Built dynamic control logic with cooldowns, sell limits, and anti-dump features, reducing price volatility by 40%.",
-      "Created frontend dashboards and 6+ backend APIs using React, Node.js, and Web3.js, serving real-time data to 500+ daily active users."
-    ]
+    duration: "2025"
   },
   {
     title: "RWA Tokenization",
-    description: "Built a tokenization platform bridging on-chain contracts and off-chain systems with real-time analytics and cloud-native deployment.",
+    description: "Real World Asset (RWA) tokenization platform designed to bridge on-chain smart contracts with secure off-chain systems for compliant asset issuance, tracking, and liquidity operations. The platform includes payment and wallet integrations, low-latency analytics pipelines, and production-grade cloud deployment for reliable scale.",
     image: rwaImage.src,
     imageClassName: "object-center scale-[1.18]",
     techStack: ["Node.js", "Web3.js", "MongoDB", "Redis", "AWS EC2", "AWS Route 53", "Nginx", "JWT", "PM2", "Socket.io"],
@@ -102,14 +89,7 @@ const projects = [
     githubUrl: "#",
     category: "Blockchain",
     company: "Personal Project",
-    duration: "2025",
-    highlights: [
-      "Developed an AMM trading system on Binance Smart Chain, executing 100,000+ trades with $5M+ trading volume.",
-      "Designed secure tokenization workflow bridging on-chain smart contracts with off-chain databases, processing 1,000+ tokenization transactions.",
-      "Implemented real-time dashboards using Socket.io and Redis caching, reducing blockchain read latency by 70% and API response time by 50%.",
-      "Integrated MoonPay for fiat-to-crypto payments processing $500,000+ in transactions and Thirdweb Wallet supporting 2,000+ wallet connections.",
-      "Deployed on AWS EC2 with PM2, Nginx load balancing, and Route 53 DNS management, achieving 99.9% uptime and supporting 3,000+ concurrent users."
-    ]
+    duration: "2025"
   }
 ]
 
@@ -237,6 +217,8 @@ export default function ProjectsShowcase() {
                 <img 
                   src={project.image} 
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className={`w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 ${project.imageClassName || ""}`}
                 />
               </div>
@@ -255,13 +237,6 @@ export default function ProjectsShowcase() {
                   <p className="text-body-text leading-relaxed">
                     {project.description}
                   </p>
-                  {project.highlights && (
-                    <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-body-text/90">
-                      {project.highlights.map((highlight: string) => (
-                        <li key={highlight}>{highlight}</li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
 
                 {/* Tech Stack */}

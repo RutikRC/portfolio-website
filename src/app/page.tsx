@@ -1,26 +1,57 @@
-import SimpleCentered from '@/components/blocks/heros/simple-centered'
-import SkillsShowcase from '@/components/blocks/feature-sections/simple-three-column-with-large-icons'
-import ProjectsShowcase from '@/components/sections/ProjectsShowcase'
-import ExperienceTimeline from '@/components/sections/ExperienceTimeline'
-import { SimpleCenteredContactForm } from '@/components/blocks/contact-forms/simple-centered-contact-form'
-import { CenteredWithLogo } from '@/components/blocks/footers/centered-with-logo'
-import { AnimatedHeader } from '@/components/sections/AnimatedHeader'
+import dynamic from "next/dynamic"
 import Logo from '@/assets/logo.png';
-import BlockchainThemeBackground from '@/components/sections/BlockchainThemeBackground'
+
+const DynamicBlockchainThemeBackground = dynamic(
+  () => import('@/components/sections/BlockchainThemeBackground').then((m) => m.default),
+  { ssr: false }
+)
+
+const DynamicAnimatedHeader = dynamic(
+  () => import('@/components/sections/AnimatedHeader').then((m) => m.AnimatedHeader),
+  { ssr: false }
+)
+
+const DynamicSimpleCentered = dynamic(
+  () => import('@/components/blocks/heros/simple-centered').then((m) => m.default),
+  { ssr: false }
+)
+
+const DynamicSkillsShowcase = dynamic(
+  () => import('@/components/blocks/feature-sections/simple-three-column-with-large-icons').then((m) => m.default),
+  { ssr: false }
+)
+
+const DynamicProjectsShowcase = dynamic(
+  () => import('@/components/sections/ProjectsShowcase').then((m) => m.default),
+  { ssr: false }
+)
+
+const DynamicExperienceTimeline = dynamic(
+  () => import('@/components/sections/ExperienceTimeline').then((m) => m.default),
+  { ssr: false }
+)
+
+const DynamicSimpleCenteredContactForm = dynamic(
+  () => import('@/components/blocks/contact-forms/simple-centered-contact-form').then((m) => m.SimpleCenteredContactForm),
+  { ssr: false }
+)
+
+const DynamicCenteredWithLogo = dynamic(
+  () => import('@/components/blocks/footers/centered-with-logo').then((m) => m.CenteredWithLogo),
+  { ssr: false }
+)
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-transparent relative">
-      <BlockchainThemeBackground />
-      <AnimatedHeader 
-        logo={Logo}
-      />
-      <SimpleCentered />
-      <SkillsShowcase />
-      <ProjectsShowcase />
-      <ExperienceTimeline />
-      <SimpleCenteredContactForm />
-      <CenteredWithLogo />
+      <DynamicBlockchainThemeBackground />
+      <DynamicAnimatedHeader logo={Logo} />
+      <DynamicSimpleCentered />
+      <DynamicSkillsShowcase />
+      <DynamicProjectsShowcase />
+      <DynamicExperienceTimeline />
+      <DynamicSimpleCenteredContactForm />
+      <DynamicCenteredWithLogo />
     </main>
   )
 }
