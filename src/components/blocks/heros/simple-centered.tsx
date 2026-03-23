@@ -99,7 +99,7 @@ export default function SimpleCentered() {
               <motion.a 
                 key={item.name} 
                 href={item.href} 
-                className="text-sm/6 font-semibold text-gray-900 hover:text-primary transition-colors font-[var(--font-display)]"
+                className="text-sm/6 font-semibold text-foreground hover:text-primary transition-colors font-[var(--font-display)]"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -120,7 +120,7 @@ export default function SimpleCentered() {
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/95 backdrop-blur-lg p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-popover/70 backdrop-blur-lg p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Rutik's Portfolio</span>
@@ -144,7 +144,7 @@ export default function SimpleCentered() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-primary/10 hover:text-primary transition-colors font-[var(--font-display)]"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-colors font-[var(--font-display)]"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -154,7 +154,7 @@ export default function SimpleCentered() {
                 <div className="py-6">
                   <a
                     href="#contact"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-primary/10 hover:text-primary transition-colors font-[var(--font-display)]"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-colors font-[var(--font-display)]"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Get in touch
@@ -183,7 +183,7 @@ export default function SimpleCentered() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative rounded-full px-4 py-2 text-sm/6 text-gray-600 ring-1 ring-primary/20 hover:ring-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 font-[var(--font-display)] bg-white/50 backdrop-blur-sm">
+            <div className="relative rounded-full px-4 py-2 text-sm/6 text-muted-foreground ring-1 ring-primary/20 hover:ring-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 font-[var(--font-display)] bg-white/0 border border-white/10 backdrop-blur-sm">
               Currently building AI-powered solutions with modern tech stack{' '}
               <a href="#projects" className="font-semibold text-secondary hover:text-primary transition-colors">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -209,7 +209,7 @@ export default function SimpleCentered() {
             </motion.div>
 
             <motion.h1 
-              className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl lg:text-7xl font-[var(--font-display)] mb-8"
+              className="text-4xl font-semibold tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl font-[var(--font-display)] mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
@@ -220,7 +220,7 @@ export default function SimpleCentered() {
             </motion.h1>
 
             <motion.p 
-              className="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8 font-[var(--font-display)] max-w-3xl mx-auto"
+              className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8 font-[var(--font-display)] max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
@@ -273,11 +273,11 @@ export default function SimpleCentered() {
               animate={{ opacity: 0.6, y: 0 }}
               transition={{ duration: 0.8, delay: 2.4 }}
             >
-              <div className="text-xs font-medium text-gray-500 mb-4 w-full">Built with modern technology stack</div>
+              <div className="text-xs font-medium text-muted-foreground mb-4 w-full">Built with modern technology stack</div>
               {['React', 'Node.js', 'MongoDB', 'AWS', 'TypeScript', 'Python'].map((tech, index) => (
                 <motion.span
                   key={tech}
-                  className="px-3 py-1 bg-white/50 backdrop-blur-sm rounded-full text-xs font-medium text-gray-600 border border-gray-200"
+                  className="px-3 py-1 bg-white/0 backdrop-blur-sm rounded-full text-xs font-medium text-muted-foreground border border-white/10"
                   whileHover={{ scale: 1.1, backgroundColor: 'rgba(139, 92, 246, 0.1)' }}
                   transition={{ delay: index * 0.1 }}
                 >
