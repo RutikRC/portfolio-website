@@ -1,11 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { ExternalLink, Code } from "lucide-react"
-import { Github } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { IconBrandGithub } from "@tabler/icons-react"
 import rwaImage from "@/assets/RWA.png"
 import volantixImage from "@/assets/volantix.png"
 import dfmImage from "@/assets/DFM.png"
@@ -256,29 +252,6 @@ export default function ProjectsShowcase() {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3">
-                  {project.liveUrl !== "#" && (
-                    <Button
-                      size="sm"
-                      onClick={() => window.open(project.liveUrl, '_blank')}
-                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:scale-105"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </Button>
-                  )}
-                  {project.githubUrl !== "#" && (
-                    <Button
-                      size="sm"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                      className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:scale-105"
-                    >
-                      <IconBrandGithub className="w-4 h-4" />
-                      Source Code
-                    </Button>
-                  )}
-                </div>
               </div>
 
               {/* Hover Glow Effect */}
