@@ -19,77 +19,51 @@ const timelineData: TimelineItem[] = [
   {
     id: "1",
     type: "education",
-    date: "2022 - 2024",
-    title: "Master of Computer Application",
-    organization: "Zeal Institute of Computer Application, Business Administration and Research",
+    date: "August 2022 - April 2024",
+    title: "Master of Computer Applications (MCA)",
+    organization: "Zeal Institute of Business Administration, Computer Application and Research",
     location: "Pune, India",
-    description: "Specializing in Blockchain and Full Stack Development with focus on machine learning applications.",
+    description: "Advanced computer science education with emphasis on software engineering, system design, and emerging technologies.",
     achievements: [
-      "Achievements: Awarded A Grade Certificate in Data Analytics",
-      "CGPA: 7.63/10"
+      "CGPA: 7.39/10",
+      "Third Prize at CodeSprint - National Level Hackathon, St. Aloysius University, Mangalor"
     ]
   },
   {
     id: "2",
     type: "work",
-    date: "Dec 2023 - Mar 2024",
-    title: "Web Developer",
+    date: "December 2022 - March 2025",
+    title: "Software Developer",
     organization: "Karmacts Systems Pvt. Ltd.",
     location: "Pune, India",
-    description: "Developed scalable web applications and contributed to core platform infrastructure.",
+    description: "Designed and developed enterprise-grade software applications using modern tech stack and microservices architecture.",
     achievements: [
-      "Developed a RESTful API that served as the backend for a web application, improving scalability and reducing latency by 30%.",
-      "Optimized backend APIs reducing response time by 40%",
-      "Collaborated on code reviews and version control with Git, boosting team productivity by 15%.",
-      "Applied best practices in coding, testing, and deployment, gaining extensive experience with a modern tech stack."
+      "Designed and developed scalable backend applications and RESTful APIs using Node.js, NestJS, TypeScript, MongoDB, and React.js",
+      "Built microservices and distributed systems supporting CRM, workflow automation, and business process management platforms",
+      "Developed RESTful APIs, reusable backend services, and asynchronous processing systems using RabbitMQ and Redis",
+      "Optimized database queries, caching layers, and backend services, significantly improving application performance",
+      "Investigated and resolved production issues through log analysis, debugging, monitoring, and root-cause analysis",
+      "Built and maintained CI/CD deployment workflows and cloud-hosted applications on AWS infrastructure",
+      "Mentored junior developers and contributed to knowledge-sharing initiatives"
     ]
   },
   {
     id: "3",
     type: "work",
-    date: "Apr 2024 - Sept 2024",
-    title: "Trainee Software Developer",
-    organization: "Karmacts Systems Pvt. Ltd.",
+    date: "April 2025 - May 2026",
+    title: "Software Developer",
+    organization: "Blocsys",
     location: "Pune, India",
-    description: "Delivered custom web applications for startups and small businesses across various industries.",
+    description: "Designed, developed, and maintained scalable backend applications with focus on cloud infrastructure and microservices.",
     achievements: [
-      "Utilized CRM software to track customer data, interactions, and activity, increasing customer satisfaction scores by 15% and improving response times by 20%.",
-      "Debugged software, identified root causes, and proposed solutions, resolving 95% of critical issues within the first 48 hours and reducing downtime by 30%.",
-      "Reviewed software requirements and provided feedback, improving alignment with customer needs by 30% and reducing requirement- related defects by 40%."
-    ]
-  },
-  {
-    id: "4",
-    type: "work",
-    date: "Oct 2024 - Mar 2025",
-    title: " Software Developer",
-    organization: "Karmacts Systems Pvt. Ltd.",
-    location: "Pune, India",
-    description: "Comprehensive computer science education with emphasis on software engineering and systems design.",
-    achievements: [
-      "Full-Stack Development: Worked on both backend and frontend development.",
-      "Mentored 5+ trainee developers on React, Node.js, and cloud technologies",
-      "Deployed web applications on AWS Amplify, LightSail, EC2.",
-      "Worked on 10+ projects using React, Node.js, and cloud technologies.",
-      "Maintained comprehensive documentation for all projects, ensuring future accessibility and knowledge transfer within the organization.",
-      "Razorpay Payment Gateway Integration: Integrated Razorpay payment gateway for seamless online transactions, enhancing user experience and increasing conversion rates by 20%.",
-    ]
-  },
-  {
-    id: "5",
-    type: "work",
-    date: "Apr 2025 - Present",
-    title: " Blockchain Developer",
-    organization: "Blocsys Technologies Pvt. Ltd.",
-    location: "Pune, India",
-    description: "Developing and maintaining as a single contributor as well as a team of 4 blockchain-based applications and solutions.",
-    achievements: [
-      "Developed Real World Assets (RWA) platform for tokenization of physical assets using blockchain technology.",
-      "Integrated MoonPay Fiat-to-Crypto Payment Gateway and Thirdweb wallet connectivity to support RWA transactions.",
-      "Conducted R&D for new features and integrations in a Liquidity Pool Bot, handling frontend, backend, and bot services.",
-      "Built a Liquidity Pool Bot that manages liquidity, executes trades based on target price and volume of token pairs on PancakeSwap.",
-      "Deployed ERC-20 Tokens on both Ethereum and Binance Smart Chain (BSC) networks using Solidity.",
-      "Created a server health monitoring system using Vite, providing real-time server status and performance metrics."
+      "Designed and developed scalable backend applications and RESTful APIs using NestJS, TypeScript, MongoDB, and Redis",
+      "Collaborated with product managers, architects, QA teams to gather requirements and deliver high-quality software solutions",
+      "Developed microservice-based systems and event-driven workflows using Redis Pub/Sub, improving scalability and reliability",
+      "Integrated external APIs and AI services to automate business processes and enhance platform capabilities",
+      "Conducted debugging, troubleshooting, and root-cause analysis for production incidents, improving system stability",
+      "Performed code reviews and contributed to coding standards, maintainability, and software quality improvements",
+      "Supported CI/CD deployments and cloud-hosted environments using AWS, Docker, Linux, Nginx, and PM2",
+      "Optimized application performance through database tuning, caching strategies, and efficient backend design"
     ]
   }
 ];

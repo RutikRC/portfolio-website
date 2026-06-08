@@ -32,12 +32,10 @@ export default function SimpleCentered() {
       backspaceSpeed: 40
     },
     {
-      text: "Building intelligent software solutions",
+      text: "Software Engineer • 3+ Years Experience",
       segments: [
-        { text: "Building ", color: 'default' as const },
-        { text: "intelligent", color: 'primary' as const },
-        { text: " software ", color: 'default' as const },
-        { text: "solutions", color: 'secondary' as const },
+        { text: "Software Engineer ", color: 'default' as const },
+        { text: "• 3+ Years Experience", color: 'primary' as const },
       ],
       typingSpeed: 70,
       pauseAfter: 2500,
@@ -45,12 +43,12 @@ export default function SimpleCentered() {
       backspaceSpeed: 35
     },
     {
-      text: "Specializing in MERN Stack & AI",
+      text: "Node.js, TypeScript, NestJS & AWS",
       segments: [
-        { text: "Specializing in ", color: 'default' as const },
-        { text: "MERN Stack", color: 'primary' as const },
+        { text: "Node.js, TypeScript, ", color: 'default' as const },
+        { text: "NestJS", color: 'primary' as const },
         { text: " & ", color: 'default' as const },
-        { text: "AI", color: 'secondary' as const },
+        { text: "AWS", color: 'secondary' as const },
       ],
       typingSpeed: 75,
       pauseAfter: 2500,
@@ -58,10 +56,11 @@ export default function SimpleCentered() {
       backspaceSpeed: 38
     },
     {
-      text: "welcome to Orchids AI",
+      text: "Crafting scalable software solutions",
       segments: [
-        { text: "welcome to ", color: 'default' as const },
-        { text: "Orchids AI", color: 'primary' as const },
+        { text: "Crafting ", color: 'default' as const },
+        { text: "scalable", color: 'primary' as const },
+        { text: " software solutions", color: 'default' as const },
       ],
       typingSpeed: 85,
       pauseAfter: 3000,
@@ -240,14 +239,10 @@ export default function SimpleCentered() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.6 }}
             >
-              I'm a  Blockchain Developer specializing in{' '}
-              <span className="text-primary font-semibold">Blockchain</span>,{' '}
-              <span className="text-secondary font-semibold">AI Integration</span> &{' '}
-              <span className="text-primary font-semibold">Web3</span>. 
-              Passionate about creating innovative solutions that bridge technology and user experience. With hands-on
-              experience in {' '}
-              <span className="text-primary font-semibold">MERN Stack</span>,{' '}
-
+              Software Engineer with <span className="text-primary font-semibold">3+ years of experience</span> designing, developing, and maintaining scalable, high-performance applications. 
+              Specialized in <span className="text-secondary font-semibold">Node.js, TypeScript, NestJS, Python, AWS, and MongoDB</span>. 
+              Experienced in microservices architecture, RESTful APIs, distributed systems, CI/CD pipelines, and production support. 
+              Proven ability to collaborate with cross-functional teams to deliver <span className="text-primary font-semibold">enterprise-grade solutions</span>.
             </motion.p>
 
             <motion.div 

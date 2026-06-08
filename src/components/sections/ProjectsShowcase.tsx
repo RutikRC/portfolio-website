@@ -8,52 +8,30 @@ import dfmImage from "@/assets/DFM.png"
 
 const projects = [
   {
-    title: "VMAP",
-    description: "Comprehensive CRM system for Vishwa Medical Admission Point, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
-    image: "/crm-2.png",
-    techStack: ["NestJS", "TypeScript", "Tailwind CSS", "React.js", "AWS EC2", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
-    category: "Full-Stack",
-    company: "Karmacts Systems Pvt. Ltd.",
-    duration: "August 2024 - March 2025"
-  },
-  {
-    title: "Ample CRM",
-    description: "Comprehensive CRM system for Ample Electricals, managing data for 2,000+ users with high performance. Features include user management, data analytics, and scalable backend infrastructure.",
+    title: "KMS CRM Platform",
+    description: "Comprehensive CRM platform to streamline lead management, sales operations, customer interactions, and business workflows. Features include Lead, Deal, Quotation, Product, Task, Call, and Meeting management with role-based access control, real-time communication via WebSockets, Kanban-based task management, advanced analytics dashboards, and dynamic rights management for secure multi-team collaboration.",
     image: "/crm-1.png",
-    techStack: ["NestJS", "TypeScript", "Tailwind CSS", "AWS EC2", "MongoDB"],
-    liveUrl: "https://app.ampleelectricals.in/",
-    githubUrl: "#",
-    category: "Full-Stack",
-    company: "Karmacts Systems Pvt. Ltd.",
-    duration: "August 2024 - October 2024"
-  },
-  {
-    title: "Stock Market Analysis",
-    description: "Machine learning model using Linear Regression to predict future opening prices of NSE-listed bank stocks with 85% accuracy. Includes comprehensive data analysis and interactive visualizations.",
-    image: "/stock-analytics.jpg",
-    techStack: ["Python", "Machine Learning", "Linear Regression", "Power BI", "NSE Data"],
+    techStack: ["NestJS", "Node.js", "TypeScript", "React.js", "MongoDB", "Socket.IO", "RabbitMQ", "Redis", "AWS EC2", "Nginx", "PM2", "Tailwind CSS"],
     liveUrl: "#",
-    githubUrl: "https://github.com/RutikRC/Stock-Market-Analysis",
-    category: "AI/ML",
-    company: "Edubridge Learning Pvt. Ltd.",
-    duration: "September 2023 - December 2023"
-  },
-  {
-    title: "Spacemate Interior Solutions",
-    description: "Complete interior design platform with CRM integration, serving 1,500+ users. Features include project management, customer tracking, and comprehensive business analytics.",
-    image: "/home.jpg",
-    techStack: ["Django", "React.js", "Ant Design", "Redux Toolkit", "Python Anywhere", "MySQL"],
-    liveUrl: "https://www.spacemate.in/",
     githubUrl: "#",
     category: "Full-Stack",
     company: "Karmacts Systems Pvt. Ltd.",
-    duration: "February 2024 - September 2024"
+    duration: "Multiple Projects"
+  },
+  {
+    title: "V2 — AI-Driven Development: Agentic Vaults & Policy Engine",
+    description: "Scalable RESTful APIs and microservice-based system for policy management and workflow automation. Implemented user management, authentication, role-based access control (RBAC), policy lifecycle management with approval workflows, asynchronous background processing using Redis Pub/Sub, comprehensive audit logging, and optimized database schemas for enhanced performance and scalability.",
+    image: "/crm-2.png",
+    techStack: ["NestJS", "MongoDB", "Redis", "Hostinger Server", "Cloudflare", "Nginx", "PM2"],
+    liveUrl: "#",
+    githubUrl: "#",
+    category: "Backend",
+    company: "Karmacts Systems Pvt. Ltd.",
+    duration: "Recent Project"
   },
   {
     title: "DeFi Market MVP",
-    description: "DeFi Trading Platform built for creating, managing, and trading Decentralized Token Folios (DTFs) across multiple blockchains. Our next-generation platform enables permissionless vault creation for ETFs (exchange-traded funds), powered by automated rebalancing, multi-asset portfolio management, and fully transparent fee structures - delivering scalable, secure, and efficient DeFi trading experiences.",
+    description: "DeFi Trading Platform built for creating, managing, and trading Decentralized Token Folios (DTFs) across multiple blockchains. Next-generation platform enabling permissionless vault creation for ETFs with automated rebalancing, multi-asset portfolio management, and fully transparent fee structures for scalable and efficient DeFi trading.",
     image: dfmImage.src,
     imageClassName: "object-center scale-[1.06]",
     techStack: ["Rust", "Anchor", "Solana web3.js", "TypeScript", "React", "Nest.js", "MongoDB"],
@@ -65,7 +43,7 @@ const projects = [
   },
   {
     title: "Volantix AMM Bot - Automated Market Maker Trading System",
-    description: "Automated Market Maker (AMM) trading system on Binance Smart Chain focused on high-frequency, rule-driven execution with liquidity management, slippage protection, and anti-volatility controls. It combines custom smart contracts, real-time dashboards, and backend APIs to deliver reliable, scalable DeFi trade operations and portfolio visibility.",
+    description: "Automated Market Maker (AMM) trading system on Binance Smart Chain with high-frequency, rule-driven execution, liquidity management, and slippage protection. Combines custom smart contracts, real-time dashboards, and backend APIs for reliable and scalable DeFi trade operations with comprehensive portfolio visibility.",
     image: volantixImage.src,
     imageClassName: "object-center scale-[1.12]",
     techStack: ["Solidity", "Node.js", "React", "Web3.js", "Express.js", "MongoDB", "Binance Smart Chain", "PancakeSwap", "AWS", "Nginx", "PM2"],
@@ -77,7 +55,7 @@ const projects = [
   },
   {
     title: "RWA Tokenization",
-    description: "Real World Asset (RWA) tokenization platform designed to bridge on-chain smart contracts with secure off-chain systems for compliant asset issuance, tracking, and liquidity operations. The platform includes payment and wallet integrations, low-latency analytics pipelines, and production-grade cloud deployment for reliable scale.",
+    description: "Real World Asset (RWA) tokenization platform bridging on-chain smart contracts with secure off-chain systems for compliant asset issuance, tracking, and liquidity operations. Includes payment and wallet integrations, low-latency analytics pipelines, and production-grade cloud deployment for reliable scale.",
     image: rwaImage.src,
     imageClassName: "object-center scale-[1.18]",
     techStack: ["Node.js", "Web3.js", "MongoDB", "Redis", "AWS EC2", "AWS Route 53", "Nginx", "JWT", "PM2", "Socket.io"],
